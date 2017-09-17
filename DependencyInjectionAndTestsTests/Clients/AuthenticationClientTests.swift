@@ -98,4 +98,14 @@ class AuthenticationClientTests: XCTestCase {
         XCTAssertEqual(httpClient.httpMethodReceived, .POST)
     }
     
+    func testEndpointBeingSent() {
+        
+        let httpClient = HttpClientMock()
+        
+        let client = AuthenticationClient(httpClient: httpClient)
+        
+        client.login(username: "cassius", password: "123") { result in }
+        
+        XCTAssertEqual(httpClient.endpointReceived, "/oauth")
+    }
 }

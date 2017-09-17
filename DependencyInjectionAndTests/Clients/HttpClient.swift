@@ -95,6 +95,8 @@ final class HttpClient: HttpClientProtocol {
                         
                         onCompletion(.successful(response))
                     }
+                    
+                    return
                 }
             }
             catch {

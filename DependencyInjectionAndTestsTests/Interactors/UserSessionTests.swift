@@ -89,4 +89,23 @@ class UserSessionTests: XCTestCase {
         XCTAssertFalse(session.isLoggedIn)
         XCTAssertNil(session.currentUser)
     }
+    
+    func testOnErrorClosureIsTriggeredWhenServerReturnsAnError() {
+        
+        let authentication = AuthenticationClientMock()
+        authentication.mockResult = .failed(.unknown)
+        
+        let notificationCenter = NotificationCenterMock()
+        
+        let session = UserSession(authenticationClient: authentication, notificationCenter: notificationCenter)
+        
+        var errorMessage: String?
+        
+        session.login(username: "username", password: "password") { (error) in
+        
+            errorMessage = error
+        }
+        
+        XCTAssertEqual(errorMessage, "There was an error processing your login. Please try again")
+    }
 }

@@ -24,18 +24,26 @@ class AuthenticationClientTests: XCTestCase {
         let client = AuthenticationClient(httpClient: httpClient)
         
         var user: User?
+        var error: HttpError?
         
         // we perform the method that will use our mock class' result, parse and return an object
         client.login(username: "username", password: "password") { result in
             
-            if case .successful(let resultUser) = result {
+            switch result {
+                
+            case .successful(let resultUser):
                 
                 user = resultUser
+                
+            case .failed(let resultError):
+                
+                error = resultError
             }
         }
         
         // test if the dictionary was well parsed and returned an object User with the expected name
         XCTAssertEqual(user?.name, "Cassius")
+        XCTAssertNil(error)
     }
     
     func testReturnsParsingErrorIfNameIsNotFoundInDictionary() {

@@ -30,12 +30,13 @@ class HttpClientTests: XCTestCase {
         
         client.request(endpoint: "/endpoint", httpMethod: .GET, bodyData: nil) { result in
             
-            if case .successful(let resultDictionary) = result {
+            switch result {
+                
+            case .successful(let resultDictionary):
                 
                 dictionary = resultDictionary
-            }
-            
-            if case .failed(let resultError) = result {
+                
+            case .failed(let resultError):
                 
                 error = resultError
             }
@@ -67,12 +68,13 @@ class HttpClientTests: XCTestCase {
         
         client.request(endpoint: "/endpoint", httpMethod: .GET, bodyData: nil) { result in
             
-            if case .successful(let resultDictionary) = result {
+            switch result {
+                
+            case .successful(let resultDictionary):
                 
                 dictionary = resultDictionary
-            }
-            
-            if case .failed(let resultError) = result {
+                
+            case .failed(let resultError):
                 
                 error = resultError
             }
@@ -99,12 +101,13 @@ class HttpClientTests: XCTestCase {
         
         client.request(endpoint: "/endpoint", httpMethod: .GET, bodyData: nil) { result in
             
-            if case .successful(let resultDictionary) = result {
+            switch result {
+                
+            case .successful(let resultDictionary):
                 
                 dictionary = resultDictionary
-            }
-            
-            if case .failed(let resultError) = result {
+                
+            case .failed(let resultError):
                 
                 error = resultError
             }

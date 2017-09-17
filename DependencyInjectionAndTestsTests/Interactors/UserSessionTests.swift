@@ -69,4 +69,24 @@ class UserSessionTests: XCTestCase {
         XCTAssertNotNil(session.currentUser)
         XCTAssertTrue(session.isLoggedIn)
     }
+    
+    func testLogoutClearsCurrentUser() {
+        
+        let authentication = AuthenticationClientMock()
+        authentication.mockResult = .successful(User(name: "Cassius"))
+        
+        let notificationCenter = NotificationCenterMock()
+        
+        let session = UserSession(authenticationClient: authentication, notificationCenter: notificationCenter)
+        
+        session.login(username: "username", password: "password") { (error) in }
+        
+        XCTAssertTrue(session.isLoggedIn)
+        XCTAssertNotNil(session.currentUser)
+        
+        session.logout()
+        
+        XCTAssertFalse(session.isLoggedIn)
+        XCTAssertNil(session.currentUser)
+    }
 }

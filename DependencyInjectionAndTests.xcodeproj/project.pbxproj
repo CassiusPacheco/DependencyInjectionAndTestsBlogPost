@@ -11,7 +11,6 @@
 		6A37248D1F6E5B670032E821 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A37248B1F6E5B670032E821 /* Main.storyboard */; };
 		6A37248F1F6E5B670032E821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A37248E1F6E5B670032E821 /* Assets.xcassets */; };
 		6A3724921F6E5B670032E821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3724901F6E5B670032E821 /* LaunchScreen.storyboard */; };
-		6A37249D1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37249C1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift */; };
 		6A3724AD1F6E5BFD0032E821 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724AB1F6E5BFD0032E821 /* ViewController.swift */; };
 		6A3724B21F6E5C750032E821 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724B11F6E5C750032E821 /* URLSessionProtocol.swift */; };
 		6A3724B41F6E5C9B0032E821 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724B31F6E5C9B0032E821 /* NotificationCenterProtocol.swift */; };
@@ -47,7 +46,6 @@
 		6A3724911F6E5B670032E821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A3724931F6E5B670032E821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A3724981F6E5B670032E821 /* DependencyInjectionAndTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DependencyInjectionAndTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A37249C1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionAndTestsTests.swift; sourceTree = "<group>"; };
 		6A37249E1F6E5B670032E821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A3724AB1F6E5BFD0032E821 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6A3724B11F6E5C750032E821 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				6A3724BE1F6E5E600032E821 /* Clients */,
 				6A3724BF1F6E5E600032E821 /* Interactors */,
 				6A3724C01F6E5E600032E821 /* Models */,
-				6A37249C1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift */,
 				6A37249E1F6E5B670032E821 /* Info.plist */,
 			);
 			path = DependencyInjectionAndTestsTests;
@@ -333,7 +330,6 @@
 				6A3724C71F6E67C50032E821 /* URLSessionMock.swift in Sources */,
 				6A3724C31F6E5E8F0032E821 /* HttpClientMock.swift in Sources */,
 				6A3724C91F6E693B0032E821 /* HttpClientTests.swift in Sources */,
-				6A37249D1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift in Sources */,
 				6A3724D31F6E81080032E821 /* UserTests.swift in Sources */,
 				6A3724C51F6E5F280032E821 /* AuthenticationClientTests.swift in Sources */,
 				6A3724CD1F6E7AB10032E821 /* UserSessionTests.swift in Sources */,

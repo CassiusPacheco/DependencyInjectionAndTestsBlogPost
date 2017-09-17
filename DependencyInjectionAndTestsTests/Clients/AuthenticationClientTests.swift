@@ -74,4 +74,17 @@ class AuthenticationClientTests: XCTestCase {
         XCTAssertNil(user)
         XCTAssertEqual(error, .parsing)
     }
+    
+    func testPOSTBodyDataBeingSent() {
+        
+        let httpClient = HttpClientMock()
+        
+        let client = AuthenticationClient(httpClient: httpClient)
+
+        client.login(username: "cassius", password: "123") { result in }
+        
+        XCTAssertEqual(httpClient.bodyDataReceived?["username"] as? String, "cassius")
+        XCTAssertEqual(httpClient.bodyDataReceived?["password"] as? String, "123")
+    }
+    
 }

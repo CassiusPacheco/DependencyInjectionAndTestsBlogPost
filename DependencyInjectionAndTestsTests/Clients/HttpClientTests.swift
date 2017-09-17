@@ -86,6 +86,38 @@ class HttpClientTests: XCTestCase {
         XCTAssertEqual(dictionary?["key"] as? String, "value")
     }
     
+    func testReturnsUnknownForEmptyResponses() {
+        
+        let expectation = self.expectation(description: "testReturnsUnknownForEmptyResponses")
+        
+        let urlSession = URLSessionMock()
+        
+        let client = HttpClient(baseUrl: "baseurl.com", urlSession: urlSession)
+        
+        var dictionary: JSONDictionary?
+        var error: HttpError?
+        
+        client.request(endpoint: "/endpoint", httpMethod: .GET, bodyData: nil) { result in
+            
+            if case .successful(let resultDictionary) = result {
+                
+                dictionary = resultDictionary
+            }
+            
+            if case .failed(let resultError) = result {
+                
+                error = resultError
+            }
+            
+            expectation.fulfill()
+        }
+        
+        XCTWaiter().wait(for: [expectation], timeout: 1.0)
+        
+        XCTAssertNil(dictionary)
+        XCTAssertEqual(error, .unknown)
+    }
+    
     func testCallsResume() {
         
         // This test ensures `resume()` is called for the task created

@@ -11,9 +11,17 @@ import Foundation
 
 class HttpClientMock: HttpClientProtocol {
     
+    private(set) var endpointReceived: String?
+    private(set) var httpMethodReceived: HttpMethod?
+    private(set) var bodyDataReceived: JSONDictionary?
+    
     var mockResult: Result<JSONDictionary>?
     
     func request(endpoint: String, httpMethod: HttpMethod, bodyData: JSONDictionary?, onCompletion: @escaping (Result<JSONDictionary>) -> Void) {
+        
+        endpointReceived = endpoint
+        httpMethodReceived = httpMethod
+        bodyDataReceived = bodyData
         
         if let result = mockResult {
             

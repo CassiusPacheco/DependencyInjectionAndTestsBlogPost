@@ -48,4 +48,12 @@ class UserSessionTests: XCTestCase {
         
         XCTAssertEqual(notificationCenter.namePostReceived, Notification.Name.userLoginStatusUpdatedNotification)
     }
+    
+    func testUserNotLoggedInIfCurrentUserIsNil() {
+        
+        let session = UserSession(authenticationClient: AuthenticationClientMock(), notificationCenter: NotificationCenterMock())
+        
+        XCTAssertNil(session.currentUser)
+        XCTAssertFalse(session.isLoggedIn)
+    }
 }

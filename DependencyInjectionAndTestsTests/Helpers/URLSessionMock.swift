@@ -18,14 +18,24 @@ class URLSessionMock: URLSessionProtocol {
     var mockData: Data?
     var mockURLResponse: URLResponse?
     var mockError: Error?
-    var mockURLSessionDataTask: URLSessionDataTask?
+    var mockURLSessionDataTask: URLSessionDataTaskProtocol?
     
-    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         
         requestReceived = request
         
         completionHandler(mockData, mockURLResponse, mockError)
         
-        return mockURLSessionDataTask ?? URLSessionDataTask()
+        return mockURLSessionDataTask ?? URLSessionDataTaskMock()
+    }
+}
+
+class URLSessionDataTaskMock: URLSessionDataTaskProtocol {
+    
+    private(set) var hasResumeBeenCalled = false
+    
+    func resume() {
+        
+        hasResumeBeenCalled = true
     }
 }

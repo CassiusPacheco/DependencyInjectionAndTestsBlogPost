@@ -33,8 +33,7 @@ enum Result<T> {
 
 protocol HttpClientProtocol {
     
-    @discardableResult
-    func request(endpoint: String, httpMethod: HttpMethod, bodyData: JSONDictionary?, onCompletion: @escaping (Result<JSONDictionary>) -> Void) -> URLSessionDataTask?
+    func request(endpoint: String, httpMethod: HttpMethod, bodyData: JSONDictionary?, onCompletion: @escaping (Result<JSONDictionary>) -> Void)
 }
 
 final class HttpClient: HttpClientProtocol {
@@ -54,10 +53,9 @@ final class HttpClient: HttpClientProtocol {
         self.urlSession = urlSession
     }
     
-    @discardableResult
-    func request(endpoint: String, httpMethod: HttpMethod, bodyData: JSONDictionary?, onCompletion: @escaping (Result<JSONDictionary>) -> Void) -> URLSessionDataTask? {
+    func request(endpoint: String, httpMethod: HttpMethod, bodyData: JSONDictionary?, onCompletion: @escaping (Result<JSONDictionary>) -> Void) {
         
-        guard let url = URL(string: baseUrl + endpoint) else { return nil }
+        guard let url = URL(string: baseUrl + endpoint) else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
@@ -80,7 +78,7 @@ final class HttpClient: HttpClientProtocol {
                     onCompletion(.failed(.json))
                 }
                 
-                return nil
+                return
             }
         }
         
@@ -113,7 +111,5 @@ final class HttpClient: HttpClientProtocol {
         }
         
         task.resume()
-        
-        return task
     }
 }

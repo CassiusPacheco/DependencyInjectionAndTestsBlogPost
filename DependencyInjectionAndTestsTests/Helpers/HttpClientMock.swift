@@ -11,17 +11,13 @@ import Foundation
 
 class HttpClientMock: HttpClientProtocol {
     
-    var mockDataTask: URLSessionDataTask?
-    
     var mockResult: Result<JSONDictionary>?
     
-    func request(endpoint: String, httpMethod: HttpMethod, bodyData: JSONDictionary?, onCompletion: @escaping (Result<JSONDictionary>) -> Void) -> URLSessionDataTask? {
+    func request(endpoint: String, httpMethod: HttpMethod, bodyData: JSONDictionary?, onCompletion: @escaping (Result<JSONDictionary>) -> Void) {
         
         if let result = mockResult {
             
             onCompletion(result)
         }
-        
-        return mockDataTask
     }
 }

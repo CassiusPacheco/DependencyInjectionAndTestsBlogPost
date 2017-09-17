@@ -14,6 +14,8 @@ class HttpClientTests: XCTestCase {
     
     func testReturnsJsonErrorForInvalidJsonFromServer() {
         
+        // This test ensures that an invalid JSON received from the server triggers a .json error
+        
         let expectation = self.expectation(description: "testReturnsSuccessfulDictionary")
         
         let urlSession = URLSessionMock()
@@ -45,5 +47,58 @@ class HttpClientTests: XCTestCase {
         
         XCTAssertNil(dictionary)
         XCTAssertEqual(error, .json)
+    }
+    
+    func testReturnsDictionaryForValidJsonFromServer() {
+        
+        // This test ensures that a valid JSON received from the server is properly parse into a dictionary
+        
+        let expectation = self.expectation(description: "testReturnsDictionaryForValidJsonFromServer")
+        
+        let urlSession = URLSessionMock()
+        urlSession.mockData = try? JSONSerialization.data(withJSONObject: ["key": "value"], options: [])
+        
+        XCTAssertNotNil(urlSession.mockData)
+        
+        let client = HttpClient(baseUrl: "baseurl.com", urlSession: urlSession)
+        
+        var dictionary: JSONDictionary?
+        var error: HttpError?
+        
+        client.request(endpoint: "/endpoint", httpMethod: .GET, bodyData: nil) { result in
+            
+            if case .successful(let resultDictionary) = result {
+                
+                dictionary = resultDictionary
+            }
+            
+            if case .failed(let resultError) = result {
+                
+                error = resultError
+            }
+            
+            expectation.fulfill()
+        }
+        
+        XCTWaiter().wait(for: [expectation], timeout: 1.0)
+        
+        XCTAssertNil(error)
+        XCTAssertEqual(dictionary?["key"] as? String, "value")
+    }
+    
+    func testCallsResume() {
+        
+        // This test ensures `resume()` is called for the task created
+        
+        let task = URLSessionDataTaskMock()
+        
+        let urlSession = URLSessionMock()
+        urlSession.mockURLSessionDataTask = task
+        
+        let client = HttpClient(baseUrl: "baseurl.com", urlSession: urlSession)
+        
+        client.request(endpoint: "/endpoint", httpMethod: .GET, bodyData: nil) { result in }
+        
+        XCTAssertTrue(task.hasResumeBeenCalled)
     }
 }

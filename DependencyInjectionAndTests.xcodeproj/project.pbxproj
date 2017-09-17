@@ -21,6 +21,7 @@
 		6A3724BD1F6E5E150032E821 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724BC1F6E5E150032E821 /* UserSession.swift */; };
 		6A3724C31F6E5E8F0032E821 /* HttpClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C21F6E5E8F0032E821 /* HttpClientMock.swift */; };
 		6A3724C51F6E5F280032E821 /* AuthenticationClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C41F6E5F280032E821 /* AuthenticationClientTests.swift */; };
+		6A3724C71F6E67C50032E821 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C61F6E67C50032E821 /* URLSessionMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		6A3724BC1F6E5E150032E821 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		6A3724C21F6E5E8F0032E821 /* HttpClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
 		6A3724C41F6E5F280032E821 /* AuthenticationClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationClientTests.swift; sourceTree = "<group>"; };
+		6A3724C61F6E67C50032E821 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				6A3724C21F6E5E8F0032E821 /* HttpClientMock.swift */,
+				6A3724C61F6E67C50032E821 /* URLSessionMock.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A3724C71F6E67C50032E821 /* URLSessionMock.swift in Sources */,
 				6A3724C31F6E5E8F0032E821 /* HttpClientMock.swift in Sources */,
 				6A37249D1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift in Sources */,
 				6A3724C51F6E5F280032E821 /* AuthenticationClientTests.swift in Sources */,

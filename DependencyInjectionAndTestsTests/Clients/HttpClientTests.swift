@@ -201,4 +201,15 @@ class HttpClientTests: XCTestCase {
         
         XCTAssertEqual(urlSession.requestReceived?.url?.absoluteString, "baseurl.com/endpoint")
     }
+    
+    func testJsonHeaderBeingSent() {
+        
+        let urlSession = URLSessionMock()
+        
+        let client = HttpClient(baseUrl: "baseurl.com", urlSession: urlSession)
+        
+        client.request(endpoint: "/endpoint", httpMethod: .PUT, bodyData: ["key": "value"]) { result in }
+        
+        XCTAssertEqual(urlSession.requestReceived?.allHTTPHeaderFields?["Accept"], "application/json")
+    }
 }

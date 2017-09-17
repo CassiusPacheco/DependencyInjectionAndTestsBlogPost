@@ -191,4 +191,14 @@ class HttpClientTests: XCTestCase {
         XCTAssertEqual(urlSession.requestReceived?.httpMethod, "PUT")
     }
     
+    func testEndpointBeingSent() {
+        
+        let urlSession = URLSessionMock()
+        
+        let client = HttpClient(baseUrl: "baseurl.com", urlSession: urlSession)
+        
+        client.request(endpoint: "/endpoint", httpMethod: .PUT, bodyData: ["key": "value"]) { result in }
+        
+        XCTAssertEqual(urlSession.requestReceived?.url?.absoluteString, "baseurl.com/endpoint")
+    }
 }

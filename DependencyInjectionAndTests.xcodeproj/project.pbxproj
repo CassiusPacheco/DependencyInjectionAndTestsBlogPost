@@ -23,6 +23,7 @@
 		6A3724C51F6E5F280032E821 /* AuthenticationClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C41F6E5F280032E821 /* AuthenticationClientTests.swift */; };
 		6A3724C71F6E67C50032E821 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C61F6E67C50032E821 /* URLSessionMock.swift */; };
 		6A3724C91F6E693B0032E821 /* HttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C81F6E693B0032E821 /* HttpClientTests.swift */; };
+		6A3724CD1F6E7AB10032E821 /* UserSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724CC1F6E7AB10032E821 /* UserSessionTests.swift */; };
 		6A3724CF1F6E7B2A0032E821 /* AuthenticationClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724CE1F6E7B2A0032E821 /* AuthenticationClientMock.swift */; };
 		6A3724D11F6E7BCB0032E821 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724D01F6E7BCB0032E821 /* NotificationCenterMock.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		6A3724C41F6E5F280032E821 /* AuthenticationClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationClientTests.swift; sourceTree = "<group>"; };
 		6A3724C61F6E67C50032E821 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		6A3724C81F6E693B0032E821 /* HttpClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientTests.swift; sourceTree = "<group>"; };
+		6A3724CC1F6E7AB10032E821 /* UserSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionTests.swift; sourceTree = "<group>"; };
 		6A3724CE1F6E7B2A0032E821 /* AuthenticationClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMock.swift; sourceTree = "<group>"; };
 		6A3724D01F6E7BCB0032E821 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +184,7 @@
 		6A3724BF1F6E5E600032E821 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				6A3724CC1F6E7AB10032E821 /* UserSessionTests.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				6A3724C91F6E693B0032E821 /* HttpClientTests.swift in Sources */,
 				6A37249D1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift in Sources */,
 				6A3724C51F6E5F280032E821 /* AuthenticationClientTests.swift in Sources */,
+				6A3724CD1F6E7AB10032E821 /* UserSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

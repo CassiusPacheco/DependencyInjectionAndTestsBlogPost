@@ -144,4 +144,21 @@ class HttpClientTests: XCTestCase {
         
         XCTAssertNil(urlSession.requestReceived)
     }
+    
+    func testPOSTBodyDataBeingSent() {
+        
+        let urlSession = URLSessionMock()
+        
+        let client = HttpClient(baseUrl: "baseurl.com", urlSession: urlSession)
+        
+        client.request(endpoint: "/endpoint", httpMethod: .POST, bodyData: ["key": "value"]) { result in }
+        
+        XCTAssertNotNil(urlSession.requestReceived?.httpBody)
+        
+        let bodyData = urlSession.requestReceived!.httpBody!
+        let dictionary = try! JSONSerialization.jsonObject(with: bodyData, options: .allowFragments) as! JSONDictionary
+        
+        XCTAssertEqual(dictionary["key"] as? String, "value")
+    }
+    
 }

@@ -87,4 +87,15 @@ class AuthenticationClientTests: XCTestCase {
         XCTAssertEqual(httpClient.bodyDataReceived?["password"] as? String, "123")
     }
     
+    func testPOSTMethodBeingSent() {
+        
+        let httpClient = HttpClientMock()
+        
+        let client = AuthenticationClient(httpClient: httpClient)
+        
+        client.login(username: "cassius", password: "123") { result in }
+        
+        XCTAssertEqual(httpClient.httpMethodReceived, .POST)
+    }
+    
 }

@@ -133,4 +133,15 @@ class HttpClientTests: XCTestCase {
         
         XCTAssertTrue(task.hasResumeBeenCalled)
     }
+    
+    func testInvalidUrl() {
+        
+        let urlSession = URLSessionMock()
+        
+        let client = HttpClient(baseUrl: "%$#%#$", urlSession: urlSession)
+        
+        client.request(endpoint: "invalidendpoint", httpMethod: .GET, bodyData: nil) { result in }
+        
+        XCTAssertNil(urlSession.requestReceived)
+    }
 }

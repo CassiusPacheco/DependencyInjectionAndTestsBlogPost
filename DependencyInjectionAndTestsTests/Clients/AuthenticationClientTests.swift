@@ -75,6 +75,35 @@ class AuthenticationClientTests: XCTestCase {
         XCTAssertEqual(error, .parsing)
     }
     
+    func testCascadeServerError() {
+        
+        let httpClient = HttpClientMock()
+        
+        httpClient.mockResult = .failed(.unknown)
+        
+        let client = AuthenticationClient(httpClient: httpClient)
+        
+        var user: User?
+        var error: HttpError?
+        
+        client.login(username: "username", password: "password") { result in
+            
+            switch result {
+                
+            case .successful(let resultUser):
+                
+                user = resultUser
+                
+            case .failed(let resultError):
+                
+                error = resultError
+            }
+        }
+        
+        XCTAssertNil(user)
+        XCTAssertEqual(error, .unknown)
+    }
+    
     func testPOSTBodyDataBeingSent() {
         
         let httpClient = HttpClientMock()

@@ -26,6 +26,7 @@
 		6A3724CD1F6E7AB10032E821 /* UserSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724CC1F6E7AB10032E821 /* UserSessionTests.swift */; };
 		6A3724CF1F6E7B2A0032E821 /* AuthenticationClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724CE1F6E7B2A0032E821 /* AuthenticationClientMock.swift */; };
 		6A3724D11F6E7BCB0032E821 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724D01F6E7BCB0032E821 /* NotificationCenterMock.swift */; };
+		6A3724D31F6E81080032E821 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724D21F6E81080032E821 /* UserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		6A3724CC1F6E7AB10032E821 /* UserSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionTests.swift; sourceTree = "<group>"; };
 		6A3724CE1F6E7B2A0032E821 /* AuthenticationClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMock.swift; sourceTree = "<group>"; };
 		6A3724D01F6E7BCB0032E821 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
+		6A3724D21F6E81080032E821 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		6A3724C01F6E5E600032E821 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6A3724D21F6E81080032E821 /* UserTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				6A3724C31F6E5E8F0032E821 /* HttpClientMock.swift in Sources */,
 				6A3724C91F6E693B0032E821 /* HttpClientTests.swift in Sources */,
 				6A37249D1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift in Sources */,
+				6A3724D31F6E81080032E821 /* UserTests.swift in Sources */,
 				6A3724C51F6E5F280032E821 /* AuthenticationClientTests.swift in Sources */,
 				6A3724CD1F6E7AB10032E821 /* UserSessionTests.swift in Sources */,
 			);

@@ -14,6 +14,7 @@
 		6A37249D1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37249C1F6E5B670032E821 /* DependencyInjectionAndTestsTests.swift */; };
 		6A3724AD1F6E5BFD0032E821 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724AB1F6E5BFD0032E821 /* ViewController.swift */; };
 		6A3724B21F6E5C750032E821 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724B11F6E5C750032E821 /* URLSessionProtocol.swift */; };
+		6A3724B41F6E5C9B0032E821 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724B31F6E5C9B0032E821 /* NotificationCenterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		6A37249E1F6E5B670032E821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A3724AB1F6E5BFD0032E821 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6A3724B11F6E5C750032E821 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		6A3724B31F6E5C9B0032E821 /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				6A3724B11F6E5C750032E821 /* URLSessionProtocol.swift */,
+				6A3724B31F6E5C9B0032E821 /* NotificationCenterProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				6A3724B21F6E5C750032E821 /* URLSessionProtocol.swift in Sources */,
 				6A3724AD1F6E5BFD0032E821 /* ViewController.swift in Sources */,
+				6A3724B41F6E5C9B0032E821 /* NotificationCenterProtocol.swift in Sources */,
 				6A3724881F6E5B670032E821 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

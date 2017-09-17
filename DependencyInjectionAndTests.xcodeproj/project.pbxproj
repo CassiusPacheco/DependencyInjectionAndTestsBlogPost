@@ -24,6 +24,7 @@
 		6A3724C71F6E67C50032E821 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C61F6E67C50032E821 /* URLSessionMock.swift */; };
 		6A3724C91F6E693B0032E821 /* HttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724C81F6E693B0032E821 /* HttpClientTests.swift */; };
 		6A3724CF1F6E7B2A0032E821 /* AuthenticationClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724CE1F6E7B2A0032E821 /* AuthenticationClientMock.swift */; };
+		6A3724D11F6E7BCB0032E821 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3724D01F6E7BCB0032E821 /* NotificationCenterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		6A3724C61F6E67C50032E821 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		6A3724C81F6E693B0032E821 /* HttpClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientTests.swift; sourceTree = "<group>"; };
 		6A3724CE1F6E7B2A0032E821 /* AuthenticationClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMock.swift; sourceTree = "<group>"; };
+		6A3724D01F6E7BCB0032E821 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				6A3724C21F6E5E8F0032E821 /* HttpClientMock.swift */,
 				6A3724C61F6E67C50032E821 /* URLSessionMock.swift */,
 				6A3724CE1F6E7B2A0032E821 /* AuthenticationClientMock.swift */,
+				6A3724D01F6E7BCB0032E821 /* NotificationCenterMock.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A3724CF1F6E7B2A0032E821 /* AuthenticationClientMock.swift in Sources */,
+				6A3724D11F6E7BCB0032E821 /* NotificationCenterMock.swift in Sources */,
 				6A3724C71F6E67C50032E821 /* URLSessionMock.swift in Sources */,
 				6A3724C31F6E5E8F0032E821 /* HttpClientMock.swift in Sources */,
 				6A3724C91F6E693B0032E821 /* HttpClientTests.swift in Sources */,
